@@ -38,6 +38,40 @@ Tech Stack Used for this Mobile Automation:
 6. Paste the method template
 7. Inside each template (Given,When,Then) Create a Selenium Java Script to start your real automation script!
 
+## How to setup and use Jenkins (CI/CD Tools)
+### How to access Jenkins
+1. Download Generic Java Package (.war) from https://www.jenkins.io/download/
+2. Open CMD, and go to the directory where you store the jenkins.war file
+   	- For example you store it in the Downloads folder, in CMD you can type **cd Downloads**
+3. Type **java -jar jenkins.war --enable-future-java** and hit enter to run the Jenkins
+4. Open any browser, in the URL bar, type **http://localhost:8080/** and hit enter
+5. Login in to Jenkins
+### How to create a job (to run our test script)
+1. On Jenkins landing page, click the + New Item
+2. Enter the Job name and Select Freestyle Project, click OK
+3. In the General Tab, Select Advance and Tick on the **Use Custom Workspace**
+4. Type your local Project directory
+	- For example:  C:\Users\your-username\eclipse-workspace\your-project-name
+5. In the Build Tab, Click Add Build Step, Click Invoke top-level Maven targets
+6. In the Goals section, type: **test**
+7. Click Save
+### How to run the job
+1. Click the Newly created Job
+2. Click Build Now, the Test Script should automatically run
+### How to schedule the job daily
+1. Open the Job
+2. Click Configure
+3. On Build Triggers section, Tick the Build periodically
+4. On Schedule, type 0 8 * * *
+	- There are 5 numbers that needs to be configured
+	- The first number, it represent on what minutes the Job will run. in this case 0, so the Job will run at 00:00 minute
+	- The second number, it represent on what hour the job will run. in this case 8, so the Job will run at 8AM
+	- The third number, it represent on what date the job will run. in this case *, so the Job will run every day
+	- The forth number, it represent on what month the job will run. in this case *, so the Job will run everymonth
+  	- The fifth number, it represent on what day the job will run. in this case *, so the Job will run every day (Sunday, Monday, etc)
+5. Click Save
+6. So for this example, the job will automatically Run at Monday, January 1, 2024, 8:00:00 AM Western Indonesia Time; would next run at Tuesday, January 2, 2024, 8:00:00 AM Western Indonesia Time.
+
 ## Glossary
 1. Cucumber: BDD Framework to enhance your automation script, for better readability especially by non tech people.
 2. Selenium: Framework for Web Automation.
