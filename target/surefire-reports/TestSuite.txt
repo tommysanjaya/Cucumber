@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 21.77 s <<< FAILURE! -- in TestSuite
+cucumberOptions.TestNGTestRunner.runScenario["Search Experience for product search in home and offers page", "Search and Buy Product"](4) -- Time elapsed: 14.93 s <<< FAILURE!
+java.lang.AssertionError: expected [Cucumber] but found [No data]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.OfferPageStepDefinition.validate_if_product_is_exist_with_same_name(OfferPageStepDefinition.java:69)
+	at ✽.validate if product is exist with same name(file:///C:/Users/tommy/eclipse-workspace/CucumberProject/src/test/java/features/SearchMultipleProduct.feature:9)
+
