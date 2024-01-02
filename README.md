@@ -1,7 +1,7 @@
 # Cucumber
 Cucumber is a Behavior-Driven Development (BDD) testing tool that uses the Gherkin language to describe software behavior in a human-readable format. Gherkin follows the Given-When-Then structure and allows collaboration between technical and non-technical stakeholders. Cucumber automates these scenarios using step definitions in programming languages, ensuring that the software aligns with specified behavior.
 
-Tech Stack Used for this Mobile Automation:
+Tech Stack Used for this Automation Testing:
 - IDE: Eclipse
 - Framework: Cucumber, Selenium, TestNG
 - Language: Java
